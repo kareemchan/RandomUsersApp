@@ -17,3 +17,8 @@ enum UsersItems: String {
   case gender = "Género"
   case phone = "Teléfono"
 }
+
+enum Genders: String {
+  case male = "Masculino"
+  case female = "Femenino"
+}

@@ -32,9 +32,18 @@ class RandomUserDetailsViewModel {
     case .email:
       return (title.rawValue, user.email)
     case .gender:
-      return (title.rawValue, user.gender)
+      return (title.rawValue, setGenderNomenclature(gender: user.gender))
     case .phone:
       return (title.rawValue, user.phone)
     }
+  }
+  
+  func setGenderNomenclature(gender: String) -> String {
+    if gender == "male" {
+      return Genders.male.rawValue
+    } else if gender == "female" {
+      return Genders.female.rawValue
+    }
+    return ""
   }
 }
